@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TP 5.1</title>
+<Style>
+	body
+	{
+		fon: 0.8em Verdana,Arial,Helvetica,sans-serif;
+		padding:20px;
+		background-color:#eee;
+	}
+	
+	input[type=text], input[type=email]
+	{
+		border:solid 1px grey;
+		width: 200px;
+		display:inline-block;
+	}
+	label
+	{
+		width:140px;
+		text-align:left;
+		display:inline-block;
+	}
+	input[type=submit]
+	{
+		border:solid 1px grey;
+		width: 75px;
+		display:inline-block;
+		margin-left:200px;
+		background-color:#ddd;
+	}
+	
+	input[type=text]:invalid, input[type=email]:invalid
+	{
+		background:#fff url(../images-tp-5-1/rond-rouge.png) no-repeat 99% center;)
+	}
+	
+	input[type=text]:valid, input[type=email]:valid
+	{
+		background:#fff url(../images-tp-5-1/rond-vert.png) no-repeat 99% center;)
+	}
+</Style>
+
+</head>
+<body>
+	<form id='inscription' method="#" action="#" autocomplete="off">
+		<p>
+			<label for="txNom">Votre nom*:</label>
+			<input type="text" id="txtnom" name="txtNom" required/>
+		</p>
+		<P>
+			<label for="txNEmail1">Votre eMail*:</label>
+			<input type="email" id="txtEmail1" name="txtEmail1" required/>
+		</P>
+		<P>
+			<label for="txNEmail2">Votre eMail*:</label>
+			<input type="email" id="txtEmail2" name="txtEmail2" pattern="^.@.+\..+$" required/>
+		</P>
+		<P>
+			<label for="txNCP">Votre code postal*:</label>
+			<input type="text" id="txtCP" name="txtCP" pattern="^[0-9]{5}$" maxlength="5"/>
+		</P>
+		<p>
+		<input type="submit" id="btnEnvoyer" name="btnEnvoyer" value="Envoyer" />
+		</p>
+	</form>
+</body>
+</html>

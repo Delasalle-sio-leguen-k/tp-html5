@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulaire clignotant</title>
+<style>
+body{
+	font:0.8em Verdana,Arial,Helvetica,sans-serif
+}
+#inscription{
+	position:absolute;
+	left:300px;
+	top:50px;
+	width: 300px;
+	padding:10px;
+	border: 1px solid#333;
+	border-radius: 10px;
+	
+	-webkit-animation: clignotement ease-in infinite alternate 500ms;
+}
+
+@-webkit-keyframes clignotement{
+0%{box-shadow: 0 0 15px red;}
+100%{box-shadow: 0 0 15px yellow;}
+}
+</style>
+</head>
+<body>
+	<form id="inscription" method='#' action='#'>
+	<p>
+		<label for="txtNom">Votre nom</label>
+		<input type="text" ="txtNom"/>
+	</p>
+	<p>
+		<label for="txtEmail">Votre email</label>
+		<input type="text" ="txtEmail"/>
+	</p>
+	</form>
+</body>
+</html>
